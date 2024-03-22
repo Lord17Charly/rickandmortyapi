@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Consumo de restapi RICK AND MORTY</p>
+        <div>
+            <label>Name:</label>
+            <input type="string" id="name">
+        </div>
+        <div>
+            <label>image:</label>
+            <input type="string" id="image">
+        </div>
+        <div>
+            <label>genre:</label>
+            <input type="string" id="genre">
+        </div>
+        <div>
+            <label>species:</label>
+            <input type="string" id="species">
+        </div>
+        <div>
+            <label>status:</label>
+            <input type="string" id="status">
+        </div>
+<br><br>
+        <button onclick="postUser()">POST USER</button>
+        <button onclick="getUsers()">GET USERS</button>
+        <br>
+        <div id="resultado"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="callrestapi.js"></script>
+        <link rel="stylesheet" href="index.css">
+    </body>
+</html>
