@@ -1,6 +1,8 @@
 var url = "http://localhost:8080/api/randm";
 
 function postUser() {
+    console.log(url);
+
     var myName = $('#name').val();
     var myImage = $('#image').val();
     var myGenre = $('#genre').val();
@@ -14,16 +16,17 @@ function postUser() {
         species: mySpecies,
         status: myStatus
     };
-    console.log(myuser);
+
+console.log(myuser);
 
     $.ajax({
         url: url,
         type: 'post',
         dataType: 'json',
         contentType: 'application/json',
-        success: function (data) {
+        sucess: function (data) {
         console.log(data);
-        $('resultado').html(JSON.stringify(data.user));
+        $('#resultado').html(JSON.stringify(data.user));
     },
     data: JSON.stringify(myuser)
     });
@@ -33,6 +36,8 @@ function getUsers() {
     console.log(url);
     $.getJSON(url, function(json) {
         console.log(json);
+
+        var arrUsers = json.users;
 
         var htmlTableUsers = '<table border=1>';
         
